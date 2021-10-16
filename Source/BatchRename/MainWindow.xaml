@@ -1,0 +1,388 @@
+﻿<Fluent:RibbonWindow x:Class="BatchRename.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BatchRename"
+        xmlns:Fluent="clr-namespace:Fluent;assembly=Fluent"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="B A T C H  R E N A M E" 
+        Height="620" 
+        Width="950"
+        Icon="/Images/IconWindow.ico"
+        ResizeMode="NoResize"
+        Closing="Window_Closing"
+        Loaded="Window_Loaded">
+    <Window.Resources>
+        <local:RelativeToAbsoluteConverter x:Key="absoluteConverter"/>
+    </Window.Resources>
+    <StackPanel>
+        <Fluent:Ribbon>
+            <Fluent:Ribbon.Menu>
+                <Fluent:Backstage Header="Developer">
+                    <Fluent:BackstageTabControl>
+                        <Fluent:BackstageTabItem Header="Student Information"
+                                                 Height="50">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50"></RowDefinition>
+                                    <RowDefinition Height="50"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0"
+                                               Text="MSSV:"
+                                               FontSize="25"
+                                               FontWeight="Bold"
+                                               Margin="5"></TextBlock>
+                                    <TextBlock Grid.Column="1"
+                                               Text="18120553"
+                                               FontSize="25"
+                                               FontWeight="Bold"
+                                               Foreground="DarkRed"
+                                               Margin="5"></TextBlock>
+                                </Grid>
+                                <Grid Grid.Row="1">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0"
+                                               Text="Họ tên:"
+                                               FontSize="25"
+                                               FontWeight="Bold"
+                                               Margin="5"></TextBlock>
+                                    <TextBlock Grid.Column="1"
+                                               Text="Nguyễn Lê Ngọc Tần"
+                                               FontSize="25"
+                                               FontWeight="Bold"
+                                               Foreground="DarkRed"
+                                               Margin="5"></TextBlock>
+                                </Grid>
+                                <Grid Grid.Row="2">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0"
+                                               Text="Email sinh viên:"
+                                               FontSize="25"
+                                               FontWeight="Bold"
+                                               Margin="5"></TextBlock>
+                                    <TextBlock Grid.Column="1"
+                                               Text="18120553@student.hcmus.edu.vn"
+                                               FontSize="25"
+                                               FontWeight="Bold"
+                                               Foreground="DarkRed"
+                                               Margin="5"></TextBlock>
+                                </Grid>
+                            </Grid>
+                        </Fluent:BackstageTabItem>
+                        <Fluent:BackstageTabItem Header="Subject">
+                            <TextBlock 
+                                       Text="Lập trình Windows"
+                                       FontSize="25"
+                                       FontWeight="Bold"
+                                       Foreground="DarkRed"
+                                       Margin="5"></TextBlock>
+                        </Fluent:BackstageTabItem>
+                        <Fluent:BackstageTabItem Header="How to use">
+                            <TextBlock 
+                                       Text="Link video demo"
+                                       FontSize="25"
+                                       FontWeight="Bold"
+                                       Foreground="DarkRed"
+                                       Margin="5"></TextBlock>
+                        </Fluent:BackstageTabItem>
+                    </Fluent:BackstageTabControl>
+                </Fluent:Backstage>
+            </Fluent:Ribbon.Menu>
+
+            <Fluent:RibbonTabItem Header="Home">
+                <Fluent:RibbonGroupBox Header="New start">
+                    <Fluent:Button Header="Refresh"  
+                                   Width="70"
+                                   Foreground="Brown"
+                                   FontWeight="Bold"
+                                   Background="LightCyan"
+                                   Click="btn_Refresh_Click">
+                        <Fluent:Button.LargeIcon>
+                            <Image Source="/Images/Refresh.png" 
+                                   RenderOptions.BitmapScalingMode="HighQuality"></Image>
+                        </Fluent:Button.LargeIcon>
+                    </Fluent:Button>
+                </Fluent:RibbonGroupBox>
+                <Fluent:RibbonGroupBox Header="Rules">
+                    <Fluent:Button Header="Open rule"  
+                                   Width="70"
+                                   Foreground="Brown"
+                                   FontWeight="Bold" 
+                                   Click="btn_OpenRuleFile_Click">
+                        <Fluent:Button.LargeIcon>
+                            <Image Source="/Images/OpenFile.png" 
+                                   RenderOptions.BitmapScalingMode="HighQuality"></Image>
+                        </Fluent:Button.LargeIcon>
+                    </Fluent:Button>
+                    <Fluent:Button Header="Save rule"  
+                                   Width="70"
+                                   Foreground="Brown"
+                                   FontWeight="Bold"
+                                   Click="btn_Save">
+                        <Fluent:Button.LargeIcon>
+                            <Image Source="/Images/SaveFile.png" 
+                                   RenderOptions.BitmapScalingMode="HighQuality"></Image>
+                        </Fluent:Button.LargeIcon>
+                    </Fluent:Button>
+                </Fluent:RibbonGroupBox>
+                <Fluent:RibbonGroupBox Header="" >
+                    <Fluent:ComboBox Header="Preset"
+                                     Foreground="DarkSlateBlue"
+                                     FontWeight="Bold"
+                                     Width="230"
+                                     Margin="0 10 0 10"
+                                     BorderBrush="CadetBlue"
+                                     BorderThickness="3"
+                                     Height="25">
+                        <ComboBoxItem Content="My Rename" Selector.IsSelected="true"></ComboBoxItem>
+                        <ComboBoxItem Content="Hello"></ComboBoxItem>
+                        <ComboBoxItem Content="Actions"></ComboBoxItem>
+                    </Fluent:ComboBox>
+                    <Fluent:ComboBox x:Name="cbb_Duplication"
+                                     Header="Duplication"
+                                     Foreground="DarkSlateBlue"
+                                     FontWeight="Bold"
+                                     Width="230"
+                                     Margin="0 5 0 0"
+                                     BorderBrush="CadetBlue"
+                                     BorderThickness="3"
+                                     Height="25">
+                        <ComboBoxItem Content="Keep the old name" Selector.IsSelected="True"></ComboBoxItem>
+                        <ComboBoxItem Content="Add suffix"></ComboBoxItem>
+                        <ComboBoxItem Content="Add prefix"></ComboBoxItem>
+                    </Fluent:ComboBox>
+                </Fluent:RibbonGroupBox>
+                <Fluent:RibbonGroupBox Header="Transactions">
+                    <Fluent:Button Header="Add"  
+                                   Width="70"
+                                   Foreground="Brown"
+                                   FontWeight="Bold"
+                                   Click="btn_Add">
+                        <Fluent:Button.LargeIcon>
+                            <Image Source="/Images/Open.png" 
+                                   RenderOptions.BitmapScalingMode="HighQuality"></Image>
+                        </Fluent:Button.LargeIcon>
+                    </Fluent:Button>
+                    <Fluent:Button Header="Clear"  
+                                   Width="70"
+                                   Foreground="Brown"
+                                   FontWeight="Bold"
+                                   Click="btn_Clear">
+                        <Fluent:Button.LargeIcon>
+                            <Image Source="/Images/Clear.png" 
+                                   RenderOptions.BitmapScalingMode="HighQuality"></Image>
+                        </Fluent:Button.LargeIcon>
+                    </Fluent:Button>
+                    <Fluent:Button Header="Preview"  
+                                   Width="70"
+                                   Foreground="Brown"
+                                   FontWeight="Bold"
+                                   Click="btn_Preview_Click">
+                        <Fluent:Button.LargeIcon>
+                            <Image Source="/Images/Preview.png" 
+                                   RenderOptions.BitmapScalingMode="HighQuality"></Image>
+                        </Fluent:Button.LargeIcon>
+                    </Fluent:Button>
+                    <Fluent:Button Header="Start Batch"  
+                                   Width="70"
+                                   Foreground="Brown"
+                                   FontWeight="Bold">
+                        <Fluent:Button.LargeIcon>
+                            <Image Source="/Images/Start.png" 
+                                   RenderOptions.BitmapScalingMode="HighQuality"></Image>
+                        </Fluent:Button.LargeIcon>
+                    </Fluent:Button>
+                </Fluent:RibbonGroupBox>
+            </Fluent:RibbonTabItem>
+            <Fluent:RibbonTabItem Header="Help">
+
+            </Fluent:RibbonTabItem>
+        </Fluent:Ribbon>
+        <Canvas>
+            <DockPanel Name="MyWindow">
+                <StackPanel Width="350" Canvas.Top="40">
+                    <Border BorderBrush="Black" BorderThickness="0.3" Height="72">
+                        <ListView Name="ListOperation" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                            <ListView.Resources>
+                                <Style TargetType="ListViewItem">
+                                    <Style.Triggers>
+                                        <Trigger Property="IsKeyboardFocusWithin" Value="True">
+                                            <Setter Property="IsSelected" Value="True"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </ListView.Resources>
+                            <ListView.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapPanel />
+                                </ItemsPanelTemplate>
+                            </ListView.ItemsPanel>
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Fluent:Button Header="{Binding Name, UpdateSourceTrigger=PropertyChanged}"  
+                                                   Width="67"
+                                                   FontWeight="Bold"
+                                                   Click="btn_Operation_Click">
+                                        <Fluent:Button.LargeIcon>
+                                            <Image Source="{Binding Image, Converter={StaticResource absoluteConverter}}" 
+                                                   RenderOptions.BitmapScalingMode="HighQuality"></Image>
+                                        </Fluent:Button.LargeIcon>
+                                    </Fluent:Button>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </Border>
+                    <Border BorderBrush="Black" BorderThickness="0.3">
+                        <Grid x:Name="UserControl" Height="160" Width="350">
+                        </Grid>
+                    </Border>
+                    <TextBlock Height="21" Background="LightCyan" FontWeight="Bold" TextAlignment="Center" Foreground="DarkOrange"> List Of Rules Added</TextBlock>
+                    <ListView x:Name="OperationList" Height="220" Canvas.Top="205" PreviewMouseRightButtonDown="OperationList_SelectedItem_Click">
+                        <ListView.Resources>
+                            <Style TargetType="ListViewItem">
+                                <Style.Triggers>
+                                    <Trigger Property="IsKeyboardFocusWithin" Value="True">
+                                        <Setter Property="IsSelected" Value="True"/>
+                                        <Setter Property="FontWeight" Value="Bold"/>
+                                        <Setter Property="Foreground" Value="DarkGoldenrod"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </ListView.Resources>
+                        <ListView.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem Header="Delete this rule" Click="DeleteOperation_Click"/>
+                                <MenuItem Header="Delete all rules with no checked" Click="DeleteAllOperation_NoChecked_Click"/>
+                                <MenuItem Header="Delete all rules with checked" Click="DeleteAllOperation_Checked_Click"/>
+                                <MenuItem Header="Delete all rules" Click="DeleteAllOperation_Click"/>
+                            </ContextMenu>
+                        </ListView.ContextMenu>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock>
+                                    <StackPanel Orientation="Horizontal">
+                                        <CheckBox Unchecked="OperationItem_Unchecked" Checked="OperationItem_Checked" 
+                                                  IsChecked="{Binding Check, UpdateSourceTrigger=PropertyChanged}"/>
+                                        <TextBlock Text="{Binding Description}" Margin="13 0 0 0" Height="18" FontSize="14"/>
+                                    </StackPanel>
+                                </TextBlock>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackPanel>
+
+                <StackPanel Height="469" Width="589" Canvas.Left="263" Canvas.Top="40">
+                    <TabControl x:Name="Tab">
+                        <TabControl.Resources>
+                            <Style TargetType="TabItem">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="TabItem">
+                                            <Border BorderThickness="1" BorderBrush="DarkCyan">
+                                                <Grid Name="TabPanel">
+                                                    <ContentPresenter x:Name="ContentSite"
+                                                                      VerticalAlignment="Center"
+                                                                      HorizontalAlignment="Center"
+                                                                      ContentSource="Header"
+                                                                      Margin="10,2"/>
+                                                </Grid>
+                                            </Border>
+                                            <ControlTemplate.Triggers>
+                                                <Trigger Property="IsSelected" Value="True">
+                                                    <Setter TargetName="TabPanel" Property="Background" Value="dodgerblue" />
+                                                    <Setter Property="FontWeight" Value="Bold" />
+                                                    <Setter Property="Foreground" Value="AliceBlue" />
+                                                </Trigger>
+                                                <Trigger Property="IsSelected" Value="False">
+                                                    <Setter TargetName="TabPanel" Property="Background" Value="Azure" />
+                                                </Trigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+
+                            </Style>
+                        </TabControl.Resources>
+                        <TabItem x:Name="tabFile" Header="Rename Files" Height="30" FontWeight="Bold">
+                            <DockPanel Height="432">
+                                <ListView x:Name="filesListView" Height="432" PreviewMouseRightButtonDown="filesListView_SelectedItem_Click">
+                                    <ListView.Resources>
+                                        <Style TargetType="{x:Type GridViewColumnHeader}">
+                                            <Setter Property="HorizontalContentAlignment" Value="Center" />
+                                            <Setter Property="FontWeight" Value="Bold" />
+                                            <Setter Property="Foreground" Value="Black" />
+                                            <Setter Property="Background" Value="LightYellow" />
+                                        </Style>
+                                    </ListView.Resources>
+                                    <ListView.ContextMenu>
+                                        <ContextMenu>
+                                            <MenuItem Header="Status Detail" Click="FileStatusDetail_Click"/>
+                                            <MenuItem Header="Show Path" Click="FileShowPath_Click"/>
+                                            <MenuItem Header="Delete this item" Click="DeleteFile_Click"/>
+                                            <MenuItem Header="Delete all item in general path" Click="DeleteAllFile_GeneralPath_Click"/>
+                                            <MenuItem Header="Delete all item have general extension in general path" Click="DeleteAllFile_GeneralExtensionInGeneralPath_Click"/>
+                                        </ContextMenu>
+                                    </ListView.ContextMenu>
+                                    <ListView.View>
+                                        <GridView>
+                                            <GridViewColumn Header="Filename" Width="150" DisplayMemberBinding="{Binding Name}"/>
+                                            <GridViewColumn Header="New Filename" Width="150" DisplayMemberBinding="{Binding NewName}"/>
+                                            <GridViewColumn Header="Path" Width="150" DisplayMemberBinding="{Binding Path}"/>
+                                            <GridViewColumn Header="Status" Width="150" DisplayMemberBinding="{Binding Error}"/>
+                                        </GridView>
+                                    </ListView.View>
+                                </ListView>
+                            </DockPanel>
+                        </TabItem>
+
+                        <TabItem x:Name="tabFolder" Header="Rename Folders" Height="30" FontWeight="Bold">
+                            <DockPanel Height="422">
+                                
+                                <ListView x:Name="foldersListView" PreviewMouseRightButtonDown="folderListView_SelectedItem_Click">
+                                    <ListView.Resources>
+                                        <Style TargetType="{x:Type GridViewColumnHeader}">
+                                            <Setter Property="HorizontalContentAlignment" Value="Center" />
+                                            <Setter Property="FontWeight" Value="Bold" />
+                                            <Setter Property="Foreground" Value="Black" />
+                                            <Setter Property="Background" Value="LightYellow" />
+                                        </Style>
+                                    </ListView.Resources>
+                                    <ListView.ContextMenu>
+                                        <ContextMenu>
+                                            <MenuItem Header="Status Detail" Click="FolderStatusDetail_Click"/>
+                                            <MenuItem Header="Show Path" Click="FolderShowPath_Click"/>
+                                            <MenuItem Header="Delete this item" Click="DeleteFolder_Click"/>
+                                            <MenuItem Header="Delete all item in general path" Click="DeleteAllFolder_GeneralPath_Click"/>
+                                        </ContextMenu>
+                                    </ListView.ContextMenu>
+                                    <ListView.View>
+                                        <GridView>
+                                            <GridViewColumn Header="Foldername" Width="150" DisplayMemberBinding="{Binding Name}"/>
+                                            <GridViewColumn Header="New Foldername" Width="150" DisplayMemberBinding="{Binding NewName}"/>
+                                            <GridViewColumn Header="Path" Width="150" DisplayMemberBinding="{Binding Path}"/>
+                                            <GridViewColumn Header="Error" Width="150" DisplayMemberBinding="{Binding Error}"/>
+                                        </GridView>
+                                    </ListView.View>
+                                </ListView>
+                            </DockPanel>
+                        </TabItem>
+                    </TabControl>
+                </StackPanel>
+            </DockPanel>
+        </Canvas>
+    </StackPanel>
+</Fluent:RibbonWindow>

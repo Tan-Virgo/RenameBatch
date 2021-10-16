@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "CDHMaKFgxA7JmnK04VekEIGic9apmI7RF5UKf5Ry12MfusGwqjXb9Q406FGGp1z7kbn3/z/onNDa6oVG8kUsnA==",
+  "success": true,
+  "projectFilePath": "D:\\_HOC_TAP_NAM_4\\HỌC KỲ 1 (2021 - 2022)\\3. Lập trình Windows\\3. Đồ án\\1. Project-1_BatchRename\\Source\\BatchRename\\BatchRename.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\controlzex\\5.0.0\\controlzex.5.0.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\fluent.ribbon\\9.0.0-alpha0148\\fluent.ribbon.9.0.0-alpha0148.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\fody\\6.5.1\\fody.6.5.1.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft-windowsapicodepack-core\\1.1.4\\microsoft-windowsapicodepack-core.1.1.4.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft-windowsapicodepack-shell\\1.1.4\\microsoft-windowsapicodepack-shell.1.1.4.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.31\\microsoft.xaml.behaviors.wpf.1.1.31.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\propertychanged.fody\\3.4.0\\propertychanged.fody.3.4.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\system.text.json\\5.0.1\\system.text.json.5.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

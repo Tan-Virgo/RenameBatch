@@ -1,0 +1,154 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "BatchRename/1.0.0": {
+        "dependencies": {
+          "Fluent.Ribbon": "9.0.0-alpha0148",
+          "Microsoft-WindowsAPICodePack-Shell": "1.1.4",
+          "PropertyChanged.Fody": "3.4.0"
+        },
+        "runtime": {
+          "BatchRename.dll": {}
+        }
+      },
+      "ControlzEx/5.0.0": {
+        "dependencies": {
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.31",
+          "System.Text.Json": "5.0.1"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/ControlzEx.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.0.30"
+          }
+        }
+      },
+      "Fluent.Ribbon/9.0.0-alpha0148": {
+        "dependencies": {
+          "ControlzEx": "5.0.0"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Fluent.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.0.148"
+          }
+        }
+      },
+      "Fody/6.5.1": {},
+      "Microsoft-WindowsAPICodePack-Core/1.1.4": {
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.WindowsAPICodePack.dll": {
+            "assemblyVersion": "1.1.4.0",
+            "fileVersion": "1.1.4.0"
+          }
+        }
+      },
+      "Microsoft-WindowsAPICodePack-Shell/1.1.4": {
+        "dependencies": {
+          "Microsoft-WindowsAPICodePack-Core": "1.1.4"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.WindowsAPICodePack.Shell.dll": {
+            "assemblyVersion": "1.1.4.0",
+            "fileVersion": "1.1.4.0"
+          }
+        }
+      },
+      "Microsoft.Xaml.Behaviors.Wpf/1.1.31": {
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.Xaml.Behaviors.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.31.10800"
+          }
+        }
+      },
+      "PropertyChanged.Fody/3.4.0": {
+        "dependencies": {
+          "Fody": "6.5.1"
+        },
+        "runtime": {
+          "lib/netstandard2.1/PropertyChanged.dll": {
+            "assemblyVersion": "3.4.0.0",
+            "fileVersion": "3.4.0.0"
+          }
+        }
+      },
+      "System.Text.Json/5.0.1": {
+        "runtime": {
+          "lib/netcoreapp3.0/System.Text.Json.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.220.61120"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BatchRename/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ControlzEx/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7lNnS3OSrnWylwZTdu5/edOq3ZqtJsW/QP6Itj8Idt7TYG5MHD38d7ejUf3jLehnsOfuUHaBdxnkziJQuUmDzg==",
+      "path": "controlzex/5.0.0",
+      "hashPath": "controlzex.5.0.0.nupkg.sha512"
+    },
+    "Fluent.Ribbon/9.0.0-alpha0148": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kLc3GpeIw8nLbOWHqLS0ss0e2f7K9NAMZ7f1v4FEEQ92zsriRNnBRgyRGg5v4T8eiDJZL6uXXgIyVgsuYPZxrA==",
+      "path": "fluent.ribbon/9.0.0-alpha0148",
+      "hashPath": "fluent.ribbon.9.0.0-alpha0148.nupkg.sha512"
+    },
+    "Fody/6.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DEw9rPG5vrpaK4vPPze0f4q6Zd0mfzjGNKy49nrmINkftIHpkyf8KH+uC/qF8y6v1askPWu9NbJS9bkmN5wXaA==",
+      "path": "fody/6.5.1",
+      "hashPath": "fody.6.5.1.nupkg.sha512"
+    },
+    "Microsoft-WindowsAPICodePack-Core/1.1.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gsEStalyKPTR5/HKyAHYvIoDZTGUTUgIBS1eeGvkjWgDYB7f5aSBFAAJfxhhDsOGDjLs6O0uzw1H0EWYWZGDmg==",
+      "path": "microsoft-windowsapicodepack-core/1.1.4",
+      "hashPath": "microsoft-windowsapicodepack-core.1.1.4.nupkg.sha512"
+    },
+    "Microsoft-WindowsAPICodePack-Shell/1.1.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-EtoEx9Fx3ZGW//sni9TB1vuBvzXIlyG8E2KNaX7bqV240aiU8RP+NmDHd1ox0YKbJDMxq7AWSI2jPhpLMYXKyw==",
+      "path": "microsoft-windowsapicodepack-shell/1.1.4",
+      "hashPath": "microsoft-windowsapicodepack-shell.1.1.4.nupkg.sha512"
+    },
+    "Microsoft.Xaml.Behaviors.Wpf/1.1.31": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LZpuf82ACZWldmfMuv3CTUMDh3o0xo0uHUaybR5HgqVLDBJJ9RZLykplQ/bTJd0/VDt3EhD4iDgUgbdIUAM+Kg==",
+      "path": "microsoft.xaml.behaviors.wpf/1.1.31",
+      "hashPath": "microsoft.xaml.behaviors.wpf.1.1.31.nupkg.sha512"
+    },
+    "PropertyChanged.Fody/3.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IAZyq0uolKo2WYm4mjx+q7A8fSGFT0x2e1s3y+ODn4JI0kqTDoo9GF2tdaypUzRFJZfdMxfC5HZW9QzdJLtOnA==",
+      "path": "propertychanged.fody/3.4.0",
+      "hashPath": "propertychanged.fody.3.4.0.nupkg.sha512"
+    },
+    "System.Text.Json/5.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/UM3UK1dXKl8Ybysg/21gM4S8DJgkR+yLU8JwqCVbuNqQNImelntgYFAN5QxR8sJJ1kMx//hOUdf0lltosi8cQ==",
+      "path": "system.text.json/5.0.1",
+      "hashPath": "system.text.json.5.0.1.nupkg.sha512"
+    }
+  }
+}

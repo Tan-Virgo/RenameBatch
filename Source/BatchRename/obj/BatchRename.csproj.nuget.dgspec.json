@@ -1,0 +1,83 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\_HOC_TAP_NAM_4\\HỌC KỲ 1 (2021 - 2022)\\3. Lập trình Windows\\3. Đồ án\\1. Project-1_BatchRename\\Source\\BatchRename\\BatchRename.csproj": {}
+  },
+  "projects": {
+    "D:\\_HOC_TAP_NAM_4\\HỌC KỲ 1 (2021 - 2022)\\3. Lập trình Windows\\3. Đồ án\\1. Project-1_BatchRename\\Source\\BatchRename\\BatchRename.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\_HOC_TAP_NAM_4\\HỌC KỲ 1 (2021 - 2022)\\3. Lập trình Windows\\3. Đồ án\\1. Project-1_BatchRename\\Source\\BatchRename\\BatchRename.csproj",
+        "projectName": "BatchRename",
+        "projectPath": "D:\\_HOC_TAP_NAM_4\\HỌC KỲ 1 (2021 - 2022)\\3. Lập trình Windows\\3. Đồ án\\1. Project-1_BatchRename\\Source\\BatchRename\\BatchRename.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "D:\\_HOC_TAP_NAM_4\\HỌC KỲ 1 (2021 - 2022)\\3. Lập trình Windows\\3. Đồ án\\1. Project-1_BatchRename\\Source\\BatchRename\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Fluent.Ribbon": {
+              "target": "Package",
+              "version": "[9.0.0-alpha0148, )"
+            },
+            "Microsoft-WindowsAPICodePack-Shell": {
+              "target": "Package",
+              "version": "[1.1.4, )"
+            },
+            "PropertyChanged.Fody": {
+              "target": "Package",
+              "version": "[3.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

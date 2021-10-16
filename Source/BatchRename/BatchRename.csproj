@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\AddList.png" />
+    <None Remove="Images\Clear.png" />
+    <None Remove="Images\IconWindow.ico" />
+    <None Remove="Images\Move.png" />
+    <None Remove="Images\Normalize.png" />
+    <None Remove="Images\Open.png" />
+    <None Remove="Images\OpenFile.png" />
+    <None Remove="Images\Preview.png" />
+    <None Remove="Images\Refresh.png" />
+    <None Remove="Images\SaveFile.png" />
+    <None Remove="Images\Start.png" />
+    <None Remove="Images\Unique.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Fluent.Ribbon" Version="9.0.0-alpha0148" />
+    <PackageReference Include="Microsoft-WindowsAPICodePack-Shell" Version="1.1.4" />
+    <PackageReference Include="PropertyChanged.Fody" Version="3.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\AddList.png" />
+    <Resource Include="Images\Clear.png" />
+    <Resource Include="Images\IconWindow.ico" />
+    <Resource Include="Images\Move.png" />
+    <Resource Include="Images\Normalize.png" />
+    <Resource Include="Images\Open.png" />
+    <Resource Include="Images\OpenFile.png" />
+    <Resource Include="Images\Preview.png" />
+    <Resource Include="Images\Refresh.png">
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\SaveFile.png" />
+    <Resource Include="Images\Start.png" />
+    <Resource Include="Images\Unique.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Images\NewCase.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Images\Replace.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
